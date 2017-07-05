@@ -18,7 +18,6 @@ public class SubSet {
                     System.out.print(set[i] + " ");
                 }
             }
-
             if (flag == 1){
                 System.out.println("∅");
             }

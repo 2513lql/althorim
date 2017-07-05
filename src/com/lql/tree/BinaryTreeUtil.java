@@ -25,6 +25,16 @@ public class BinaryTreeUtil {
 	}
 
 
+	public static TreeNode generateBinaryTree2(){
+
+		TreeNode root = new TreeNode(3);
+		TreeNode left = new TreeNode(6);
+		TreeNode right = new TreeNode(7);
+		root.left = left;
+		root.right = right;
+
+		return root;
+	}
 
 	public static TreeNode generateBinaryTree3(){
 

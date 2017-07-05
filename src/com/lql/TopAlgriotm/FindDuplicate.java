@@ -1,4 +1,4 @@
-package com.lql.algorithm.sort;
+package com.lql.TopAlgriotm;
 
 /**
  * Created by Administrator on 2017/3/7.

@@ -31,7 +31,7 @@ public class AllPermutation {
     }
 
     public static void main(String[] args) {
-        char[] chars = {'A','B','C'};
+        char[] chars = {'A','B','C','C'};
         List<String> res = new ArrayList<>();
         dfs(0,chars.length,chars,res);
         for (String s : res){
