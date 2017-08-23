@@ -1,26 +1,21 @@
 package com.lql.Basic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by LQL on 2017/3/5.
  */
-public class Child extends Father{
+public class Child {
 
-    public Child(){
-        System.out.println("this is child");
-    }
-
-
-    static{
-        System.out.println("this is static block");
-    }
-
-    public static void staticMethod(){
-        System.out.println("this is a static method");
-    }
-
-    public static void main(String[] args) {
-        new Child();
-
-    }
+//    public static <E> List<E> getList(E type){
+//
+//        List<E> list = new ArrayList<E>();
+//
+//    }
+//
+//    public <E> List<E> getLis(E type){
+//
+//    }
 
 }
