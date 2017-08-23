@@ -42,9 +42,11 @@ public class Main {
 //            }
 //        }
 
-        String str1 = "hello";
-        String str2 = "he" + new String("llo");
-        System.out.println(str1 == str2);
+//        String str1 = "hello";
+//        String str2 = "he" + new String("llo");
+//        System.out.println(str1 == str2);
+
+        System.out.println(1 << 30);
 
     }
 

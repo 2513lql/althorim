@@ -19,10 +19,9 @@ public class CoinChange {
                 return o2.money - o1.money;
             }
         });
-
         int i = 0;
         int count = 0;
-        while (sum > 0){
+        while (sum > 0 && i < moneys.length){
             if (moneys[i].count * moneys[i].money <= sum){
                 count+= moneys[i].count;
                 sum -= moneys[i].count * moneys[i].money;
@@ -33,6 +32,7 @@ public class CoinChange {
             }
             i++;
         }
+        if (sum > 0) return -1;
         return count;
     }
 
@@ -52,16 +52,16 @@ public class CoinChange {
 
 
     public static void main(String[] args) {
-        int N = 7;
-        Money[] moneys = new Money[7];
-        int[] count = {3,0,2,1,0,3,5};
-        int[] money = {1,2,5,10,20,50,100};
+        int N = 5;
+        Money[] moneys = new Money[5];
+        int[] count = {5,5,5,6,5};
+        int[] money = {1,2,5,9,10};
         for (int i = 0 ; i < N;i++){
             Money money1 = new Money(count[i],money[i]);
             moneys[i] = money1;
         }
 
-        System.out.println(getMinCount(145,moneys));
+        System.out.println(getMinCount(18,moneys));
 
     }
 

@@ -1,6 +1,6 @@
 package com.lql;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by LQL on 2017/4/2.
@@ -53,12 +53,21 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main simpleRecursion = new Main();
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.nextLine();
-        long n = Long.parseLong(s);
-        long res = simpleRecursion.simpleRec(n);
-        System.out.println(res);
+//        Main simpleRecursion = new Main();
+//        Scanner scanner = new Scanner(System.in);
+//        String s = scanner.nextLine();
+//        long n = Long.parseLong(s);
+//        long res = simpleRecursion.simpleRec(n);
+//        System.out.println(res);
+        String[] arrays = {"",""};
+        Arrays.sort(arrays, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return 0;
+            }
+        });
+
+
     }
 
 }
