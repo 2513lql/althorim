@@ -1,4 +1,4 @@
-package com.lql.algorithm.sort;
+package com.lql.TopAlgriotm;
 
 /**
  * Created by Administrator on 2017/3/7.
@@ -15,10 +15,8 @@ public class FindDuplicate {
         for (int i = 1;i <= n;i++){
             sum ^= A[i];
         }
-
         return sum;
     }
-
 
     public static void main(String[] args) {
         int[] A = new int[1001];

@@ -22,13 +22,10 @@ public class PathSum2 {
     }
 
     public static List<List<Integer>> pathSum(TreeNode root, int sum){
-
         if (root == null) return result;
         Stack<Integer> path = new Stack<>();
         path(root,sum,path);
         return result;
     }
-
-
 
 }

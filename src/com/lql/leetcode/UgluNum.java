@@ -9,8 +9,6 @@ public class UgluNum {
 
         if (num == 0) return false;
 
-
-
         while (num % 5 == 0){
             num = num / 5;
         }

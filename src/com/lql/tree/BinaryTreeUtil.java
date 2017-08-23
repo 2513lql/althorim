@@ -47,5 +47,9 @@ public class BinaryTreeUtil {
 		right2.right = right5;
 		return root;
 	}
+
+	public static void main(String[] args) {
+		System.out.println(System.currentTimeMillis());
+	}
 	
 }
