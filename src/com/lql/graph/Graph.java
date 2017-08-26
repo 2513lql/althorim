@@ -63,8 +63,8 @@ public class Graph {
         }
         for (int i = 0 ; i < edeges.length;i++){
 
-            int pos1 = edeges[i][0];
-            int pos2 = edeges[i][1];
+            int pos1 = getPosition(edeges[i][0]);
+            int pos2 = getPosition(edeges[i][1]);
             graphEdegs[pos1][pos2] = 1;
             graphEdegs[pos2][pos1] = 1;
         }

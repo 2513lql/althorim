@@ -27,6 +27,8 @@ public class KThMax {
         }else {
             int partition = partition(A,low,high);
             if (partition + 1 == k){
+
+
                 return A[partition];
             }else if (k < partition + 1){
                 return max_K_Big(A,low,partition - 1,k);
@@ -39,9 +41,7 @@ public class KThMax {
     public static void main(String[] args) {
         int[] A = {2,3,4,5,1,6};
         System.out.println(max_K_Big(A,0,5,3));
-        for (int i : A){
-            System.out.print(i + " ");
-        }
+
     }
 
 }

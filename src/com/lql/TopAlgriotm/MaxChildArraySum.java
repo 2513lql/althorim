@@ -59,10 +59,45 @@ public class MaxChildArraySum {
         return max;
     }
 
+    public static int maxSubArray(int[] A){
+        if(A==null||A.length==0)
+            return 0;
+        int maxSum=Integer.MIN_VALUE;
+        for(int i=0;i<A.length;i++){
+            int sum=0;
+            for(int j=i;j<A.length;j++){
+                sum+=A[j];
+                maxSum=(sum>maxSum)?sum:maxSum;
+            }
+        }
+        return maxSum;
+    }
+
+    public static int maxArray(int[] A){
+        if (A == null){
+            return 0;
+        }
+        int max = Integer.MIN_VALUE;
+        for (int i =0 ; i < A.length;i++){
+            int sum = 0;
+            for (int j = i; j < A.length;j ++){
+                sum += A[j];
+                max = sum > max ? sum : max;
+
+            }
+        }
+        return max;
+    }
+
+
+
+
+
     public static void main(String[] args) {
-//        int[] A = {1,-2,3,10,-4,7,2,-5};
-        int[] A = {-3,-2,-1};
-        System.out.println(maxChildArraySum(A));
+        int[] A = {1,-2,3,10,-4,7,2,-5};
+        int[] A1 = {-1,2};
+        System.out.println(maxChildArraySum(A1));
+        System.out.println(maxSubArray(A));
     }
 
 }

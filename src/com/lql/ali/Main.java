@@ -1,5 +1,8 @@
 package com.lql.ali;
 
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * Created by LQL on 2017/4/26.
  */
@@ -71,8 +74,27 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String day = "2016-12-1";
-        getPreDay(day);
+        A a = new A();
+        try {
+            atomicInteger.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        a.start();
+
     }
 
+   static AtomicInteger atomicInteger = new AtomicInteger();
+
+    static class A extends Thread{
+
+        @Override
+        public void run() {
+
+            atomicInteger.notify();
+            atomicInteger.lazySet(1);
+
+            System.out.println(atomicInteger.get());
+        }
+    }
 }

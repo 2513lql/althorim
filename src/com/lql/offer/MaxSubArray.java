@@ -33,7 +33,7 @@ public class MaxSubArray {
     }
 
     public static void main(String[] args) {
-        int[] A = {1,-2,3,2};
+        int[] A = {-23,17,-7,11,-2,1,-34};
         System.out.println(maxSubArray(A));
     }
 

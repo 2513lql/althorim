@@ -28,15 +28,13 @@ public class LongestCommonStr {
                 if (s1[i - 1] == s2[j - 1]){
                     count[i][j] = count[i - 1][j - 1] + 1;
                     tmp[i][j] = 0;
-                }
-                else if (count[i-1][j] >= count[i][j - 1]){
+                }else if (count[i-1][j] >= count[i][j - 1]){
                     count[i][j] = count[i-1][j];
                     tmp[i][j] = 1;
                 }else{
                     count[i][j] = count[i][j - 1];
                     tmp[i][j] = -1;
                 }
-
             }
         System.out.println(count[m][n]);
         List<Character> res = new ArrayList<>();
