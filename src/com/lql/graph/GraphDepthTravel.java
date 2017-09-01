@@ -13,9 +13,4 @@ public class GraphDepthTravel {
 
 
 
-
-    public static void main(String[] args) {
-
-    }
-
 }

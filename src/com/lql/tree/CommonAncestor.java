@@ -24,7 +24,5 @@ public class CommonAncestor {
     }
     public static void main(String[] args) {
         System.out.println(commonAncestor(BinaryTreeUtil.generateBinaryTree(),4,9).val);
-        char a = '米';
-        System.out.println(a);
     }
 }

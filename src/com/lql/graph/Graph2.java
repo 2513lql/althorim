@@ -11,8 +11,6 @@ import java.util.*;
  *
  * 图的算法
  *
- *
- *
  */
 public class Graph2 {
 
@@ -28,7 +26,6 @@ public class Graph2 {
         for (int i = 0 ; i < mVex.length;i++){
             mVex[i] = vex[i];
         }
-
         mMatrix = new int[vex.length][vex.length];
         for (int i = 0 ; i < matrix.length;i++){
             for (int j = 0;j < matrix[i].length;j++){
@@ -41,7 +38,6 @@ public class Graph2 {
     public static void DFS(){
 
         boolean[] flag = new boolean[mVex.length];
-
         for (int i = 0 ; i < mVex.length;i++){
             DFS(flag,i);
         }
@@ -65,7 +61,6 @@ public class Graph2 {
         boolean[] isVisit = new boolean[mVex.length];
         Queue<Integer> queue = new LinkedList<>();
         for (int i = 0 ; i < mVex.length;i++){
-
             if (!isVisit[i]){
                 isVisit[i] = true;
                 System.out.println("---->" + mVex[i]);
@@ -84,7 +79,6 @@ public class Graph2 {
         }
 
     }
-
 
 
     static class Edata{

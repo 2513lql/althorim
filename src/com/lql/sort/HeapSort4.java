@@ -1,5 +1,7 @@
 package com.lql.sort;
 
+import com.lql.design.pattern.factory.SimpleFactory;
+
 /**
  * Created by LQL on 2017/3/22.
  */
@@ -40,6 +42,41 @@ public class HeapSort4 {
         for (int i = size;i > 0;i--){
             buildMaxHeap(A,i);
             swap(A,0,i - 1);
+        }
+    }
+
+
+    public static void headSet(int[] A,int size,int index){
+
+        int left = index * 2 + 1;
+        int right = index * 2 + 2;
+        int change = index;
+        if (left <= size && A[left] > A[change]){
+            change = left;
+        }
+        if (right <= size && A[right] > A[change]){
+            change = right;
+        }
+
+        if (change != index){
+            swap(A,index,change);
+        }
+
+    }
+
+
+    public static void buildHead(int[] A,int size){
+
+        for (int i = size / 2 - 1; i >=0;i++){
+            headSet(A,size,i);
+        }
+    }
+
+    public static void headSort(int[] A,int size){
+
+        while (size > 0){
+            buildHead(A,size);
+            A[size--] = A[0];
         }
     }
 
