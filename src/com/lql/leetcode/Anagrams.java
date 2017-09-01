@@ -53,7 +53,15 @@ public class Anagrams {
         return true;
     }
 
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 
     public static void main(String[] args) {
         List<Integer> res = findAnagrams("abab","ab");
